@@ -16,7 +16,7 @@
 #ifndef NOTEPAD2_VERSION_H
 #define NOTEPAD2_VERSION_H
 
-#include "VersionRev.h"
+//#include "VersionRev.h"
 
 #ifndef _T
 #if !defined(ISPP_INVOKED) && (defined(UNICODE) || defined(_UNICODE))
@@ -33,6 +33,8 @@
 #define VERSION_MINOR   2
 #define VERSION_BUILD   25
 
+#define VERSION_REV		0713
+
 #define MY_APPNAME                   L"Notepad2-mod"
 #define VERSION_FILEVERSION_NUM      VERSION_MAJOR,VERSION_MINOR,VERSION_BUILD,VERSION_REV
 #define VERSION_FILEVERSION          STRINGIFY(VERSION_MAJOR) "." STRINGIFY(VERSION_MINOR) "." \
@@ -47,25 +49,45 @@
 
 #if defined(_WIN64)
    #define VERSION_FILEVERSION_LONG  L"Notepad2-mod (64-bit) " STRINGIFY(VERSION_MAJOR) L"." \
-                                     STRINGIFY(VERSION_MINOR) L"." STRINGIFY(VERSION_BUILD)  \
-                                     L" r" STRINGIFY(VERSION_REV) L" (" VERSION_HASH L")"
+                                     STRINGIFY(VERSION_MINOR) L"." STRINGIFY(VERSION_BUILD)  //\
+                                     //L" r" STRINGIFY(VERSION_REV) L" (" VERSION_HASH L")"
 #else
    #define VERSION_FILEVERSION_LONG  L"Notepad2-mod " STRINGIFY(VERSION_MAJOR) L"."         \
-                                     STRINGIFY(VERSION_MINOR) L"." STRINGIFY(VERSION_BUILD) \
-                                     L" r" STRINGIFY(VERSION_REV) L" (" VERSION_HASH L")"
+                                     STRINGIFY(VERSION_MINOR) L"." STRINGIFY(VERSION_BUILD) //\
+                                     //L" r" STRINGIFY(VERSION_REV) L" (" VERSION_HASH L")"
 #endif
 
 // Compiler specific
+//#if defined(_MSC_VER)
+//    #if _MSC_VER == 1910
+//        #if (_MSC_FULL_VER >= 191025017 && _MSC_FULL_VER <= 191025019)
+//            #define VERSION_COMPILER    L"MSVC 2017"
+//        #endif
+//    #else
+//        #define VERSION_COMPILER        L"MSVC (version unknown)"
+//    #endif
+//#else
+//    #define VERSION_COMPILER            L"(Unknown compiler)"
+//#endif
+
 #if defined(_MSC_VER)
-    #if _MSC_VER == 1910
-        #if (_MSC_FULL_VER >= 191025017 && _MSC_FULL_VER <= 191025019)
-            #define VERSION_COMPILER    L"MSVC 2017"
-        #endif
-    #else
-        #define VERSION_COMPILER        L"MSVC (version unknown)"
-    #endif
+#	if _MSC_VER >= 1910
+#		define VERSION_COMPILER		L"MSVC 2017"
+#	elif _MSC_VER == 1900
+#		define VERSION_COMPILER		L"MSVC 2015"
+#	elif _MSC_VER == 1800
+#		define VERSION_COMPILER		L"MSVC 2013"
+#	elif _MSC_VER == 1700
+#		define VERSION_COMPILER		L"MSVC 2012"
+#	elif _MSC_VER == 1600
+#		define VERSION_COMPILER		L"MSVC 2010"
+#	elif _MSC_VER == 1500
+#		define VERSION_COMPILER		L"MSVC 2008"
+#	else
+#		define VERSION_COMPILER		L"MSVC (version unknown)"
+#	endif
 #else
-    #define VERSION_COMPILER            L"(Unknown compiler)"
+#	define VERSION_COMPILER			L"(Unknown compiler)"
 #endif
 
 #endif // NOTEPAD2_VERSION_H
