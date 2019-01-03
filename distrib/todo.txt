@@ -1,2 +1,9 @@
-1) Use RegQueryStringValue to get the uninstall command for the other versions.
-   I need to trim down the command in order to use it.
+1) Use ReEnclose Selection
+
+gQueryStringValue to get the uninstall command for the other versions.    I need to trim down the command in order to use it.
+
+不自动换行|换行缩进1个字符|换行缩进2个字符|换行缩进1个等级|换行缩进两个等级|换行缩进作为第一个子行|比第一个子行多缩进一级
+
+包装前无标记
+在换行前显示标记（靠近文本）
+在换行前显示标记（靠近边框）
