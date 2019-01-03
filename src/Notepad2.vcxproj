@@ -221,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\res\Copy.cur" />
+    <None Include="..\res\cur00001.cur" />
     <None Include="..\res\Encoding.bmp" />
     <None Include="..\res\Next.bmp" />
     <None Include="..\res\Notepad2.ico" />
@@ -239,6 +240,17 @@
     <ProjectReference Include="..\scintilla\Scintilla.vcxproj">
       <Project>{5877b917-512b-49f5-b514-1b4159e7a9ca}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\bmp00001.bmp" />
+    <Image Include="..\res\bmp00002.bmp" />
+    <Image Include="..\res\bmp00003.bmp" />
+    <Image Include="..\res\bmp00004.bmp" />
+    <Image Include="..\res\bmp00005.bmp" />
+    <Image Include="..\res\ico00001.ico" />
+    <Image Include="..\res\ico00002.ico" />
+    <Image Include="..\res\idr_main.ico" />
+    <Image Include="..\res\mainwnd.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

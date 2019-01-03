@@ -28,7 +28,7 @@
 #define IDC_DEFAULTSCHEME               101
 #define IDC_GETFAVORITESDIR             101
 #define IDC_INFOBOXTEXT                 101
-#define IDB_OPEN                        101
+//#define IDB_OPEN                        101
 #define IDR_ACCFINDREPLACE              101
 #define IDC_STYLELABEL                  101
 #define IDC_RESIZEGRIP4                 101
@@ -124,6 +124,7 @@
 #define IDC_NFOASOEM                    300
 #define IDC_COMPILER                    301
 #define IDC_COMPILER2                   302
+#define IDB_OPEN                        303
 #define IDS_APPTITLE                    10000
 #define IDS_APPTITLE_ELEVATED           10001
 #define IDS_APPTITLE_PASTEBOARD         10002
