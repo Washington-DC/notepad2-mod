@@ -1014,7 +1014,6 @@ HWND InitInstance(HINSTANCE hInstance, LPSTR pszCmdLine, int nCmdShow)
 	UpdateStatusbar();
 
 	return(hwndMain);
-
 }
 
 
