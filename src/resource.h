@@ -3,6 +3,11 @@
 // π© Notepad2.rc  π”√
 //
 #define IDC_LIST1                       0
+#define ID_1                            1
+#define ID_2                            2
+#define ID_3                            3
+#define ID_LANGUAGE_CHINESE             4
+#define ID_LANGUAGE_ENGLISH             5
 #define IDR_MAINWND                     100
 #define IDC_FINDTEXT                    100
 #define IDC_LINENUM                     100
@@ -28,7 +33,6 @@
 #define IDC_DEFAULTSCHEME               101
 #define IDC_GETFAVORITESDIR             101
 #define IDC_INFOBOXTEXT                 101
-//#define IDB_OPEN                        101
 #define IDR_ACCFINDREPLACE              101
 #define IDC_STYLELABEL                  101
 #define IDC_RESIZEGRIP4                 101
@@ -434,7 +438,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        0
-#define _APS_NEXT_COMMAND_VALUE         0
+#define _APS_NEXT_COMMAND_VALUE         6
 #define _APS_NEXT_CONTROL_VALUE         1
 #define _APS_NEXT_SYMED_VALUE           0
 #endif
